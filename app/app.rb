@@ -32,7 +32,7 @@ class App
     @announcement = announcement
     @content = render_template(template)
     body = render_template('layout')
-    headers = { 'Content-Type' => 'text/html; charset=utf-8' }
+    headers = { 'content-type' => 'text/html; charset=utf-8' }
 
     [status_code, headers, [body]]
   end
@@ -45,7 +45,7 @@ class App
 
   def handle_missing_path
     body = File.read('./public/404.html')
-    headers = { 'Content-Type' => 'text/html; charset=utf-8' }
+    headers = { 'content-type' => 'text/html; charset=utf-8' }
 
     [404, headers, [body]]
   end
